@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunitas Ibadurrahman</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+ <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+
+<!-- Add the Firebase products you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-storage.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBqukh3SibLC0InBy9mxv-19KXcC73GVuw",
+    authDomain: "ibadurrahman-com.firebaseapp.com",
+    projectId: "ibadurrahman-com",
+    storageBucket: "ibadurrahman-com.appspot.com",
+    messagingSenderId: "254452085720",
+    appId: "1:254452085720:web:47f1b281e69a5c7a4a38ad",
+    measurementId: "G-VZ19FTBWG8"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" alt="Logo" class="navbar-logo">
+    <span class="navbar-text">Ibadurrahman</span>
+  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">Ibadurrahman</span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- Link navbar lainnya -->
+      </ul>
+    </div>
+<!-- Tombol Tentang Kami -->
+<div class="about-btn-wrapper">
+    <button type="button" class="btn btn-primary about-btn" id="tentangKamiBtn">
+        Tentang Kami
+    </button>
+</div>
+  </nav>
+  
+  <!-- Modal Tentang Kami -->
+  <!-- ... (sama seperti kode yang sudah ada) ... -->
+<!-- Akhir Navigasi -->
+
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Selamat Datang di Komunitas Ibadurrahman</h1>
+        <p class="lead">Bergabunglah bersama kami untuk membangun ukhuwwah yang kuat. Bersama kita Hebat !</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGabung">Gabung Sekarang</button>
+    </div>
+</div>
+<!-- Akhir Jumbotron -->
+
+<!-- Modal Gabung -->
+<div class="modal fade" id="modalGabung" tabindex="-1" role="dialog" aria-labelledby="modalGabungLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalGabungLabel">Formulir Pendaftaran Anggota Baru</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+          </div>
+          <div class="form-group">
+            <label for="email">Alamat Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan alamat email">
+          </div>
+          <div class="form-group">
+            <label for="telepon">Nomor Telepon</label>
+            <input type="tel" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary">Daftar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Akhir Modal Gabung -->
+
+<!-- Konten -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Sekilas Tentang Kami</h2>
+            <p>Komunitas Ibadurrahman adalah sebuah wadah untuk para pemuda Islam. Kami ada untuk menjadikan Generasi Muda Islam Hebat dan Mandiri.
+                Mandiri dalam Mental dan juga Finansial, dan tentu saja Spiritual juga. Segera Bergabunglah bersama Kami !
+                Bersama-sama kita kuatkan Islam !
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Keuntungan Bergabung</h2>
+            <ul>
+                <li>Pembuntukan Diri yang Mandiri</li>
+                <li>Berbagi Ide dan Wawasan Pikiran</li>
+                <li>Ikut serta dalam kegiatan sosial</li>
+                <li>Mendapatkan bimbingan dari Pembina</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Tanya Ustadz -->
+<div class="container">
+    <!-- (tidak ada perubahan) -->
+    <form id="formTanyaUstadz" action="your-server-url" method="POST"> <!-- Ganti "your-server-url" dengan URL server Anda -->
+        <div class="form-group">
+            <label for="namaPertanyaan">Nama Lengkap</label>
+            <input type="text" class="form-control" id="namaPertanyaan" name="namaPertanyaan" placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+            <label for="emailPertanyaan">Alamat Email</label>
+            <input type="email" class="form-control" id="emailPertanyaan" name="emailPertanyaan" placeholder="Masukkan alamat email">
+        </div>
+        <div class="form-group">
+            <label for="pertanyaan">Pertanyaan</label>
+            <textarea class="form-control" id="pertanyaan" name="pertanyaan" rows="5" placeholder="Tuliskan pertanyaan Anda di sini"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
+    </form>
+</div>
+<!-- Akhir Tanya Ustadz -->
+<p style="text-align: right;">Komunitas Ibadurrahman</p>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-10">
+    &copy; 2023 Komunitas Islam. Hak Cipta Dilindungi.
+</footer>
+<!-- Akhir Footer -->
+<!-- JavaScript -->
+<script>
+    document.getElementById('tentangKamiBtn').addEventListener('click', function() {
+        window.open('tentang-kami.html', '_blank');
+    });
+</script>
+<script src="firebase.js"></script>
+</body>
+</html>
